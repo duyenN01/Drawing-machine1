@@ -13,13 +13,13 @@ function draw() {
   strokeWidth = noise(noiseOffset) *10;
 
 
-  //if (mouseIsPressed == true) {
+  if (mouseIsPressed == true) {
     //background(255,130,12,5);
     stroke(map(mouseX,0,600,0,255,true),map(mouseY,0,600,0,115,true) );
     line(width- mouseX, height-mouseY, width-pmouseX, height-pmouseY);
     line(mouseX, mouseY, pmouseX, pmouseY);
     //array.push([mouseX, mouseY]);
-  //}
+  }
 
 }
 function keyTyped(){
@@ -27,7 +27,7 @@ function keyTyped(){
   if (key === 's'){
     //save this image
     saveCanvas('fileName', 'png');
-} else if (key === 'd'){
+} else if (key === 'c'){
   //background(255);
 //display image
 clear();
