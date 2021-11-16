@@ -3,18 +3,18 @@ let array =[];
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(255,130,12);
+
   strokeWeight(5);
   noFill();
 }
 
 function draw() {
   if (mouseIsPressed == true) {
-  
-    //stroke(map(mouseX,0,600,0,255,true),map(mouseY,0,600,0,115,true) );
-    // line(width- mouseX, height-mouseY, width-pmouseX, height-pmouseY);
-    //line(mouseX, mouseY, pmouseX, pmouseY);
-    array.push([mouseX, mouseY]);
+    background(255,130,12,5);
+    stroke(map(mouseX,0,600,0,255,true),map(mouseY,0,600,0,115,true) );
+    line(width- mouseX, height-mouseY, width-pmouseX, height-pmouseY);
+    line(mouseX, mouseY, pmouseX, pmouseY);
+    //array.push([mouseX, mouseY]);
   }
 
 }
@@ -26,12 +26,13 @@ function keyTyped(){
 } else if (key === 'd'){
   background(255);
 //display image
-beginShape();
-    for (let i = 0; i < array.length; i++){
-      //line(array[i][0],array[i][1],array[i+1][0],array[i+1][1]);
-      curveVertex(array[i][0],array[i][1])
-  }
-  endShape();
+clear();
+// beginShape();
+//     for (let i = 0; i < array.length; i++){
+//       //line(array[i][0],array[i][1],array[i+1][0],array[i+1][1]);
+//       curveVertex(array[i][0],array[i][1])
+//   }
+//   endShape();
 }
   return false;
 
