@@ -1,21 +1,25 @@
-let array =[];
-
-
+//let array =[];
+let noiseOffset = 0.0;
+let strokeWidth = 5;
 function setup() {
   createCanvas(windowWidth, windowHeight);
-
-  strokeWeight(5);
-  noFill();
+background(220,50,130);
 }
 
 function draw() {
-  if (mouseIsPressed == true) {
-    background(255,130,12,5);
+  strokeWeight(strokeWidth);
+
+  noiseOffset +=  0.05;
+  strokeWidth = noise(noiseOffset) *10;
+
+
+  //if (mouseIsPressed == true) {
+    //background(255,130,12,5);
     stroke(map(mouseX,0,600,0,255,true),map(mouseY,0,600,0,115,true) );
     line(width- mouseX, height-mouseY, width-pmouseX, height-pmouseY);
     line(mouseX, mouseY, pmouseX, pmouseY);
     //array.push([mouseX, mouseY]);
-  }
+  //}
 
 }
 function keyTyped(){
@@ -24,7 +28,7 @@ function keyTyped(){
     //save this image
     saveCanvas('fileName', 'png');
 } else if (key === 'd'){
-  background(255);
+  //background(255);
 //display image
 clear();
 // beginShape();
