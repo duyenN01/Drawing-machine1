@@ -2,15 +2,15 @@ let array =[];
 
 
 function setup() {
-  createCanvas(600,600);
-  background(255);
+  createCanvas(windowWidth, windowHeight);
+  background(255,130,12);
   strokeWeight(5);
   noFill();
 }
 
 function draw() {
   if (mouseIsPressed == true) {
-    background(0);
+  
     //stroke(map(mouseX,0,600,0,255,true),map(mouseY,0,600,0,115,true) );
     // line(width- mouseX, height-mouseY, width-pmouseX, height-pmouseY);
     //line(mouseX, mouseY, pmouseX, pmouseY);
