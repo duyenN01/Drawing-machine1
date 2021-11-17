@@ -8,6 +8,7 @@ background(220,50,130);
 
 function draw() {
   strokeWeight(strokeWidth);
+  stroke(random(100, 255, 255), random(233, 100, 50), random(100, 255, 100));
 
   noiseOffset +=  0.05;
   strokeWidth = noise(noiseOffset) *10;
@@ -31,6 +32,7 @@ function keyTyped(){
   //background(255);
 //display image
 clear();
+//background(220,50,130);
 // beginShape();
 //     for (let i = 0; i < array.length; i++){
 //       //line(array[i][0],array[i][1],array[i+1][0],array[i+1][1]);
